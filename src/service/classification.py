@@ -9,7 +9,7 @@ import logging
 import config.config as config
 import service.endpoint as endpoint
 import llm.classification as classification
-from app_schemas import Verbatim, Classification
+from service.app_schemas import Verbatim, Classification
 
 logger = config.logger
 
