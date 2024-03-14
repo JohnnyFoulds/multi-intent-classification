@@ -7,7 +7,6 @@ import copy
 from typing import List
 import logging
 import config.config as config
-import service.endpoint as endpoint
 import llm.classification as classification
 from service.app_schemas import Verbatim, Classification
 
@@ -26,11 +25,11 @@ def remove_other(input:Classification) -> Classification:
 
     return updated if len(updated.categories) else input
 
-def get_classification(text:str):
+def get_classification(text:str, llm):
     """Classify the top level categories for the specified text."""
     try:
         logging.info("Classifying verbatim...")
-        result = remove_other(classification.get_classification(text=text))
+        result = remove_other(classification.get_classification(text=text, llm=llm))
         logging.info("Classiffication done.")
     except Exception as e:
         logger.warning("Error classifying verbatim: %s", e)

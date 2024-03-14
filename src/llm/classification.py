@@ -78,14 +78,11 @@ chain_identification = None
 chain_sentiment = None
 sentiment_output_parser = None
 
-def configure_chains():
+def configure_chains(llm):
     global chain_planning
     global chain_identification
     global chain_sentiment
     global sentiment_output_parser
-
-    # get the large language model client
-    llm = mistral.create_llm_client()
 
     # create the chains
     chain_planning = prompt_planning | llm | StrOutputParser()
@@ -102,7 +99,7 @@ def should_ignore(text:str) -> bool:
 
     return text.lower() in IGNORE_LIST
 
-def get_classification(text:str):
+def get_classification(text:str, llm):
     """
     Classify the top level categories for the specified text.
     """
@@ -119,7 +116,7 @@ def get_classification(text:str):
             return None
 
         # configure the chains
-        configure_chains()
+        configure_chains(llm=llm)
 
         # get the initial thoughts
         initial_thoughts = chain_planning.invoke({
