@@ -1,0 +1,2 @@
+prompt-toolkit==3.0.43
+matplotlib==3.8.3

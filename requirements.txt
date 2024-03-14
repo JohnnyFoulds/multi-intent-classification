@@ -1,0 +1,4 @@
+pandas==2.2.1
+tensorflow[and-cuda]==2.15.0.post1
+langchain==0.1.12
+pydantic==2.6.4

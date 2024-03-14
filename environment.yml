@@ -1,0 +1,11 @@
+name: multi-intent
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - cudatoolkit=11.8
+  - pip:
+      - -r requirements_dev.txt
+      - -r requirements.txt
