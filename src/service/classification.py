@@ -31,7 +31,9 @@ def get_classification(text:str, llm):
         logging.info("Classifying verbatim...")
 
         # remove emojies mistral can't handle
-        text = text.replace('🤬', '')
+        text = text \
+            .replace('🤬', '') \
+            .replace('😤', '')
 
         # perform the classification
         result = remove_other(classification.get_classification(text=text, llm=llm))
