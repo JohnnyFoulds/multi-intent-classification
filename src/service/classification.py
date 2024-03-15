@@ -29,6 +29,11 @@ def get_classification(text:str, llm):
     """Classify the top level categories for the specified text."""
     try:
         logging.info("Classifying verbatim...")
+
+        # remove emojies mistral can't handle
+        text = text.replace('🤬', '')
+
+        # perform the classification
         result = remove_other(classification.get_classification(text=text, llm=llm))
         logging.info("Classiffication done.")
     except Exception as e:
