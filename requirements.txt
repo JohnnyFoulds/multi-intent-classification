@@ -1,5 +1,6 @@
 pandas==2.2.1
 tensorflow[and-cuda]==2.15.0.post1
+keras-cv==0.8.2
 langchain==0.1.12
 pydantic==1.10.9
 pyarrow==15.0.1
