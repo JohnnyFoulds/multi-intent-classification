@@ -1,5 +1,5 @@
 pandas==2.2.1
-tensorflow[and-cuda]==2.15.0.post1
+tensorflow[and-cuda]==2.15.1
 keras-cv==0.8.2
 keras-nlp==0.8.2
 langchain==0.1.12
