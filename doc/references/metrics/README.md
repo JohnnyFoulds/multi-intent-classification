@@ -1,0 +1,10 @@
+# What metrics are used to evaluate the results of multi-label classification?
+
+A range of metrics are used to evaluate the results of multi-label classification. Diao (2022) introduces a hierarchical multi-level class label for multi-class multi-target tracking, while Mangolin (2020) uses F-Score and AUC-PR to evaluate a multimodal approach for movie genre classification. Petković (2020) proposes ensemble-based feature ranking scores, and Alazaidah (2020) presents a multi-label ranking algorithm based on positive pairwise correlations among labels. Gao (2023) focuses on multi-label feature selection based on Min-Relevance Label, and Heydarian (2022) introduces the Multi-Label Confusion Matrix (MLCM) for performance assessment. Gharebaghi (2022) presents LP-MLTSVM, a Laplacian Multi-Label Twin Support Vector Machine for semi-supervised classification, and Kulkarni (2018) proposes an Interactive Multi-Label Consensus Labeling Model for Multiple Labeler Judgments. These studies collectively demonstrate the diverse range of metrics and approaches used to evaluate multi-label classification.
+
+## CAVES: A Dataset to facilitate Explainable Classification and Summarization of Concerns towards COVID Vaccines
+
+- [Paper](https://arxiv.org/pdf/2204.13746.pdf)
+- [Code](https://github.com/sohampoddar26/caves-data)
+
+Metrics for Evaluation: Given the set of predicted and gold stan- dard labels, we have used 4 different metrics to estimate the perfor- mance of the models. First we calculate the F1-score for all the 12 classes separately and find the (i) Macro-average, and (ii) Weighted- average (where the weights of the classes are proportional to the class frequencies). We also calculate the Jaccard similarity between the predicted label-set and the gold standard label-set over each tweet, and average the Jaccard similarity values over all tweets. Fi- nally we also calculate the subset accuracy – for a particular tweet, a predicted set of labels is considered a match only if it exactly matches with the set of gold standard labels. All metrics were calcu- lated using standard functions from the Scikit-Learn package [27].
